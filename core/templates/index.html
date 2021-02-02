@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Djando 1 Index</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+<center>
+    <h1>Index</h1>
+    <img src="{% static 'images/django.png' %}">
+    <br><br>
+    <table>
+        <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for p in produto %}
+            <tr>
+                <td><a href="{% url 'produto' p.id %}">{{ p.nome }}</a></td>
+                <td>{{ p.preco }}</td>
+                <td>{{ p.estoque }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button onclick="teste()">Clique Aqui</button>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</center>
+</body>
+</html>

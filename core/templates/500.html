@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Error 500</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+<h1>Não foi possível processar a requisição.</h1>
+<a href="{% url 'index' %}"><strong>Retornar para home</strong></a>
+</body>
+</html>
